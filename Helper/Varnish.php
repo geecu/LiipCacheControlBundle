@@ -124,7 +124,7 @@ class Varnish
             sprintf('Host: %s', $this->domain)
         );
         if (isset($options[CURLOPT_HTTPHEADER])) {
-            $options[CURLOPT_HTTPHEADER]    = array_merge($headers, $options[CURLOPT_HTTPHEADER]);
+            $options[CURLOPT_HTTPHEADER]    = array_merge($headers, $options);
         } else {
             $options[CURLOPT_HTTPHEADER]    = $headers;
         }
